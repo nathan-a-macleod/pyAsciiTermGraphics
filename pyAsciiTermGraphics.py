@@ -11,7 +11,7 @@ class scene:
 		for y in range(0, self.canvHeight):
 			currentLine = []
 			for x in range(0, self.canvWidth):
-				currentLine.append(" ") # "`" is the background character
+				currentLine.append(" ") # The background character
 
 			self.canvas.append(currentLine)
 
