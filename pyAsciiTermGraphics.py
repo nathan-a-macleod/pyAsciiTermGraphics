@@ -85,3 +85,52 @@ class scene:
 		# Actually draw it:
 		for i in range(0, len(points)):
 			self.drawPixel(points[i][0], points[i][1], character)
+
+# Other things for things like drawing text with ASCII:
+def printText(string, textSpacing=1, border=False):
+    currentString = ""
+    
+    if textSpacing == 1:
+        textSpacing = ""
+
+    elif textSpacing == 2:
+        textSpacing = " "
+
+    elif textSpacing == 3:
+        textSpacing = "  "
+
+    if border == False:
+        if textSpacing != "":
+            for i in range(0, len(string)):
+                currentString += string[i].upper() + str(textSpacing)
+
+            print(currentString)
+
+        else:
+            print(string)
+
+    elif border == True:
+        if textSpacing != "":
+            for i in range(0, len(string)):
+                currentString += string[i].upper() + str(textSpacing)
+
+            print("+", end="")
+            for i in range(0, len(currentString)+1):
+                print("-", end="")
+            print("+")
+            print("| " + currentString + "|")
+            print("+", end="")
+            for i in range(0, len(currentString)+1):
+                print("-", end="")
+            print("+")
+
+        else:
+            print("+", end="")
+            for i in range(0, len(string)+2):
+                print("-", end="")
+            print("+")
+            print("| " + string + " |")
+            print("+", end="")
+            for i in range(0, len(string)+2):
+                print("-", end="")
+            print("+")
