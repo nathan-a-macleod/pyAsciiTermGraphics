@@ -18,8 +18,5 @@ mainScene.drawLine((3, 0), (25, 14), "=")
 mainScene.drawPixel(29, 14, "#")
 mainScene.printCanvas()
 
-printText("Do you like the program?", 3, False)
-print()
-
 input("Press enter to clear the screen: ")
 clearConsole()
