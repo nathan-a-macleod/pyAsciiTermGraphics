@@ -1,5 +1,8 @@
 from pyAsciiTermGraphics import *
 
+printText("Screen Width: " + str(screenWidth), 2)
+printText("Screen Height: " + str(screenHeight), 2)
+
 printText("Normal Text Outlined", 1, True)
 printText("Normal Text", 1, False) # (1 and False are default values so you don't have to put them in in this case - I just included them for demonstration purposes)
 print()
