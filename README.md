@@ -3,10 +3,9 @@ This is a small library for creating ASCII graphics in the terminal with Python!
 
 ## Usage & Installation:
 Once Python 3 is installed on your system, you need to clone the repository.
-```python
 Then in the repositories folder, create a new file - in the file put the following lines of code (From main.py):
 from pyAsciiTermGraphics import *
-
+```python
 printText("Screen Width: " + str(screenWidth), 2)
 printText("Screen Height: " + str(screenHeight), 2)
 
