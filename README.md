@@ -4,7 +4,7 @@ This is a small library for creating ASCII graphics in the terminal with Python!
 ## Usage & Installation:
 Once Python 3 is installed on your system, you need to clone the repository.
 Then in the repositories folder, create a new file - in the file put the following lines of code (From main.py):
-```
+```python
 from pyAsciiTermGraphics import *
 
 printText("Normal Text Outlined", 1, True)
