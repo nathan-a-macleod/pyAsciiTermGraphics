@@ -1,5 +1,8 @@
 import os
 
+screenWidth = os.get_terminal_size().columns
+screenHeight = os.get_terminal_size().lines
+
 # Main classes:
 class scene:
 	def __init__(self, canvWidth, canvHeight):
@@ -90,57 +93,57 @@ class scene:
 
 # Other things for things like drawing text with ASCII:
 def printText(string, textSpacing=1, border=False):
-    currentString = ""
-    
-    if textSpacing == 1:
-        textSpacing = ""
+	currentString = ""
+	
+	if textSpacing == 1:
+		textSpacing = ""
 
-    elif textSpacing == 2:
-        textSpacing = " "
+	elif textSpacing == 2:
+		textSpacing = " "
 
-    elif textSpacing == 3:
-        textSpacing = "  "
+	elif textSpacing == 3:
+		textSpacing = "  "
 
-    if border == False:
-        if textSpacing != "":
-            for i in range(0, len(string)):
-                currentString += string[i].upper() + str(textSpacing)
+	if border == False:
+		if textSpacing != "":
+			for i in range(0, len(string)):
+				currentString += string[i].upper() + str(textSpacing)
 
-            print(currentString)
+			print(currentString)
 
-        else:
-            print(string)
+		else:
+			print(string)
 
-    elif border == True:
-        if textSpacing != "":
-            for i in range(0, len(string)):
-                currentString += string[i].upper() + str(textSpacing)
+	elif border == True:
+		if textSpacing != "":
+			for i in range(0, len(string)):
+				currentString += string[i].upper() + str(textSpacing)
 
-            print("+", end="")
-            for i in range(0, len(currentString)+1):
-                print("-", end="")
-            print("+")
-            print("| " + currentString + "|")
-            print("+", end="")
-            for i in range(0, len(currentString)+1):
-                print("-", end="")
-            print("+")
+			print("+", end="")
+			for i in range(0, len(currentString)+1):
+				print("-", end="")
+			print("+")
+			print("| " + currentString + "|")
+			print("+", end="")
+			for i in range(0, len(currentString)+1):
+				print("-", end="")
+			print("+")
 
-        else:
-            print("+", end="")
-            for i in range(0, len(string)+2):
-                print("-", end="")
-            print("+")
-            print("| " + string + " |")
-            print("+", end="")
-            for i in range(0, len(string)+2):
-                print("-", end="")
-            print("+")
+		else:
+			print("+", end="")
+			for i in range(0, len(string)+2):
+				print("-", end="")
+			print("+")
+			print("| " + string + " |")
+			print("+", end="")
+			for i in range(0, len(string)+2):
+				print("-", end="")
+			print("+")
 
 def clearConsole():
-    print("Clearing the screen..")
-    if os.name == "nt":
-        _ = os.system("cls")
+	print("Clearing the screen..")
+	if os.name == "nt":
+		_ = os.system("cls")
 
-    else:
-        _ = os.system("clear")
+	else:
+		_ = os.system("clear")
