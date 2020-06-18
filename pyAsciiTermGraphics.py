@@ -1,3 +1,5 @@
+import os
+
 # Main classes:
 class scene:
 	def __init__(self, canvWidth, canvHeight):
@@ -134,3 +136,11 @@ def printText(string, textSpacing=1, border=False):
             for i in range(0, len(string)+2):
                 print("-", end="")
             print("+")
+
+def clearConsole():
+    print("Clearing the screen..")
+    if os.name == "nt":
+        _ = os.system("cls")
+
+    else:
+        _ = os.system("clear")
