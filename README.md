@@ -2,11 +2,32 @@
 This is a small library for creating ASCII graphics in the terminal with Python!
 
 ## Usage & Installation:
-To install this, you must first have Python 3 installed. I won't go over this in any detail because there are loads tutorials on the internet.
+Once Python 3 is installed on your system, you need to clone the repository.
+Then in the repositories folder, create a new file - in the file put the following lines of code (From main.py):
+`
+from pyAsciiTermGraphics import *
 
-Once Python 3 is installed on your system, you need to clone the repository. Then, you can run the example file (main.py) with python3.
+printText("Normal Text Outlined", 1, True)
+printText("Normal Text", 1, False) # (1 and False are default values so you don't have to put them in in this case - I just included them for demonstration purposes)
+print()
+printText("Medium Text Outlined", 2, True)
+printText("Medium Text", 2, False)
+print()
+printText("Large Text Outlined", 3, True)
+printText("Large Text", 3, False)
 
-Hopefully the example file will have enough details for you to get started. If you want to make another file, you need to include the pyAsciiTermGraphics.py file for it to work.
+mainScene = scene(30, 15)
+mainScene.resetCanvas()
+mainScene.drawLine((3, 0), (25, 14), "=")
+mainScene.drawPixel(29, 14, "#")
+mainScene.printCanvas()
 
-## Contributing
-It would be great if you could contribute to this project - just fork it, clone it, change it, and send a pull request!
+printText("Do you like the program?", 3, False)
+print()
+
+input("Press enter to clear the screen: ")
+clearConsole()
+`
+If you get no errors, you should be good to go - just have a look at the main.py file to work out how to use the library - it should have enough information.
+
+If you get any errors, bugs, or have any ideas for new features, please feel free to either create a Github issue or contribute to this project - just fork it, clone it, change it, and send a pull request!
